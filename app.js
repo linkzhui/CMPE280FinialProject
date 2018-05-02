@@ -8,9 +8,10 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var body_parser = require('body-parser');
 var app = express();
-
+var expressEjsExtend = require("express-ejs-extend");
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
+app.engine('ejs', require('express-ejs-extend')); // add this line
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
@@ -22,7 +23,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+//MongoDB setup
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('localhost:27017/280FinalProject');
 
+//Make the database accessible to the router.
+app.use(function(req, res, next)
+{
+    req.db = db;
+    next();
+});
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

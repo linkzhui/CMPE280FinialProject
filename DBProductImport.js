@@ -1,4 +1,4 @@
-function DBimport()
+function DBProductImport()
 {
     //MongoDB setup
     var mongo = require('mongodb');
@@ -186,5 +186,5 @@ function DBimport()
     });
 }
 
-DBimport();
+DBProductImport();
 //check if the user account is registered or not
