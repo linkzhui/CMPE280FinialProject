@@ -20,4 +20,8 @@ router.get('/beauty', function(req, res, next) {
     res.render('beauty', { title: 'Beauty' });
 });
 
+router.get('/detail', function(req, res, next) {
+    res.render('detail', { title: 'Detail' });
+});
+
 module.exports = router;
