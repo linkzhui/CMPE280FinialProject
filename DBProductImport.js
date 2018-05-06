@@ -80,13 +80,20 @@ function DBProductImport()
             "\"Makeup shouldn’t cover your skin, it should enhance your natural beauty, not mask it.\"—François Nars, Founder and Creative Director of NARS Cosmetics","reviews":{"review1":"I have very dark circles and dry skin, this concealer works wonderful on my dry under eye area. It covers beautifully, it is not heavy and makes me look so awake and rest every time I use it. I set it with the Laura Mercier Secret Brightening Powder and I apply it with a beauty blender (it looks horrible on my dry skin if I apply it with a brush.) Hope this info helps you !! =)","review2":"Bought the travel size in Vanilla, while waiting in the huge lineup a week ago. I have to say it is worth every penny! Wow! Smooth - Full Coverage - Not cakey - Blends super well. I will buy again!","review3":"Purchased this concealer for under eye use - I have very dark circles thanks to genetics, so I use under eye concealer on a daily basis. This concealer provides a great amount of coverage without looking caked on and blends very easily. I have used several other products - Yves St Laurent Touche Eclat and Benefit Fake-Up most recently - and find this concealer to be superior to both for all day stay and coverage without being noticeable."},"rate":"4.1","pictureURI":"https://s3-us-west-1.amazonaws.com/cmpe280finalprojectbucket/beautyimg/beauty8.jpg"},
         "beauty9":{"name":"One Essential City Defense SPF 50","price":"59","description":"An invisible revolutionary shield that offers unequaled skin protection against toxins. " +
             "Thanks to a triple anti-pollution action—anti-adhesion, anti-penetration, and anti-oxidization—and powerful UVA/UVB filters, your skin is protected for up to eight hours. It works great as a makeup base, refreshes skin, and delivers youthful-looking radiance. ","reviews":{"review1":"I have tried numerous sunscreens in search of just the right amount of protection without the shine, grease or ghostly pale undertones. This is by far the best facial sunscreen ever. I use it alone or under my foundation and it also smooths as a primer, so no primer needed now. I am hooked. Pricey yes but I feel its worth the splurge.","review2":"This is the best SPF I have ever used. It is lightweight smells amazing and glides on with no chalky residue. Whatever I was using before I threw out!! I tell everyone to try it. You only need a little. This is a staple in my daily routine. If it wasn't so privy if slather it on all over. Best purchase to make","review3":"this one just beat my holy grail sunscreen! I've tried a lot of sunscreens over the years. drugstore and high end ones.I've tried Japanese, European, American, Korean, bb & cc creams and even organic brands but nothing seems to work as well as the Clarins which I always gravitate back to, until I tried this one. -it's lightweight -doesn't clog my pores (i have combination skin) -doesn't give me more breakouts ( i suffer from acne vulgaris) -doesn't irritate my sensitive skin -doesn't feel greasy (still haven't tried it during summertime though) the only con is maybe the price tag, however, with this product a little goes a long way. i only need to use half the quantity of what i generally use with my other sunscreens."},"rate":"4.0","pictureURI":"https://s3-us-west-1.amazonaws.com/cmpe280finalprojectbucket/beautyimg/beauty9.jpeg"}};
-    var clothes = {"clothes1":{"name":"Lana Stripe Sweater","price":"98.50","description":"The spring crew. In a lightweight linen blend for warm days and nights. To layer over or under.\n" +
+    var clothes = {
+        "clothes1":{"name":"Lana Stripe Sweater","price":"98.50","description":"The spring crew. In a lightweight linen blend for warm days and nights. To layer over or under.\n" +
             " Linen blend " +
             " Straight, relaxed fit " +
             " 24\" in length, based on a size M; our model is 5'9\" and is wearing a size S " +
             " Rollneck; rib knit trim at cuffs and hem; three functioning polished gold-tone buttons at the cuff " +
             " Dry clean " +
-            " ImportedClub Monaco cannot accept any in-store returns. ","reviews":{"review1":"Great sweater for spring! Lightweight and comfortable.","review2":"This sweater is pleasant. It's modern, slim, light fabric that transitions throughout the seasons, and looks beautiful. It's slightly long enough for leggings, but would be best with jeans or khakis.","review3":"So comfy. Great casual sweater to wear with jeans!"},"rate":"4","pictureURI":"https://crawler-cache-jellolabs-com.imgix.net/3oBwSgvCJnC0Ly_6/source_photo.jpg?auto=compress%2Cformat&amp;w=540&amp;h=540&amp;fit=clip"},
+            " ImportedClub Monaco cannot accept any in-store returns. ",
+            "reviews":{
+                "review1":"Great sweater for spring! Lightweight and comfortable.",
+                "review2":"This sweater is pleasant. It's modern, slim, light fabric that transitions throughout the seasons, and looks beautiful. It's slightly long enough for leggings, but would be best with jeans or khakis.",
+                "review3":"So comfy. Great casual sweater to wear with jeans!"},
+            "rate":"4",
+            "pictureURI":"https://s3-us-west-1.amazonaws.com/cmpe280finalprojectbucket/clothes/c1.jpg"},
         "clothes2":{"name":"Scharpettah Dress","price":"288","description":"Minted. A muted pale green hue and an allover swiss dot pattern soften a halter neckline with a vintage nod. For special occasions and weekend dates. " +
             "Polyester; lining: polyester " +
             "Relaxed fit " +
@@ -95,21 +102,28 @@ function DBProductImport()
             "Partially lined " +
             "Pale aloe colorway available online only " +
             "Dry clean " +
-            "Imported ","reviews":{"review1":"This dress is so falttering. It hugs the smallest part of your waist, and the hi low is so cute! I wear it to work, and Im planning to take it to Mexico with me for vacation","review2":"This a very cute and comfortable dress. It could be worn casually or dressed up","review3":"This dress fit beautifully! I can't wait to flaunt it in Jamaica!"},"rate":"5","pictureURI":""},
+            "Imported ","reviews":{"review1":"This dress is so falttering. It hugs the smallest part of your waist, and the hi low is so cute! I wear it to work, and Im planning to take it to Mexico with me for vacation","review2":"This a very cute and comfortable dress. It could be worn casually or dressed up","review3":"This dress fit beautifully! I can't wait to flaunt it in Jamaica!"},
+            "rate":"5",
+            "pictureURI":"https://s3-us-west-1.amazonaws.com/cmpe280finalprojectbucket/clothes/c2.jpeg"},
         "clothes3":{"name":"Crista Jacket in Studio","price":"368","description":"Pay homage to the 90s in our Crista Jean Jacket. The classic look is reinvented with slashed side slits that add a special touch to the light denim wash, uncovering what’s underneath. Slightly oversized, a high low hem features light distressing at the edges for a cool, no-fuss silhouette. " +
             "Size and fit " +
             "- 100% Cotton " +
             "- Non-Stretch " +
             "- Fits true to size " +
             "- Model is wearing size Small. " +
-            "- Made in Los Angeles ","reviews":{"review1":"This jacket is so sexy and comfortable! It literally brings together ANY look and it is so chic! My only complaint is that it does look a little boxy when you zip it all, it runs slightly small, but you only notice it when you zip it all up. I still got a medium and it feels great. Buy this jacket! It IS SO WORTH IT! I might even buy more in different colors.","review2":"I love love LOVE this jacket. The style is so cute and adds more flare when looking to dress up casual outfits, especially when you just want to wear some tennis ","review3":"I really liked this coat it was very stylish and fit well ... just didn't work or the occasion that I was looking for"},"rate":"4.3","pictureURI":"https://crawler-cache-jellolabs-com.imgix.net/vldOBz_R70Tzk_3Y/source_photo.jpg?auto=compress%2Cformat&amp;w=540&amp;h=800&amp;fit=clip"},
+            "- Made in Los Angeles ","reviews":{"review1":"This jacket is so sexy and comfortable! It literally brings together ANY look and it is so chic! My only complaint is that it does look a little boxy when you zip it all, it runs slightly small, but you only notice it when you zip it all up. I still got a medium and it feels great. Buy this jacket! It IS SO WORTH IT! I might even buy more in different colors.","review2":"I love love LOVE this jacket. The style is so cute and adds more flare when looking to dress up casual outfits, especially when you just want to wear some tennis ","review3":"I really liked this coat it was very stylish and fit well ... just didn't work or the occasion that I was looking for"},
+            "rate":"4.3",
+            "pictureURI":"https://s3-us-west-1.amazonaws.com/cmpe280finalprojectbucket/clothes/c3.png"},
         "clothes4":{"name":"Zemphira Romper","price":"149","description":"A fine frenzy. Bold blooms and a bright hue breathe new life into the romper. For dressing up with heels and hoops or down with sneakers and a tote. " +
             "Polyester " +
             "Straight fit " +
             "3 inseam, based on a size 6; our model is 5'10\" and is wearing a size 2 " +
             "V-neck; concealed modesty snap button; elastic waist; slant pockets; belt at waist " +
             "Dry clean " +
-            "Imported ","reviews":{"review1":"This color is gorgeous for spring. It fits well and is of great quality.","review2":"So comfy, so flattering. Will be buying in multiple colors","review3":"Busty girls beware! This shirt is way move low-cut than it looks in the photos."},"rate":"3.2","pictureURI":"http://www.clubmonaco.com/product/index.jsp?productId=147070746"},
+            "Imported ",
+            "reviews":{"review1":"This color is gorgeous for spring. It fits well and is of great quality.","review2":"So comfy, so flattering. Will be buying in multiple colors","review3":"Busty girls beware! This shirt is way move low-cut than it looks in the photos."},
+            "rate":"3.2",
+            "pictureURI":"https://s3-us-west-1.amazonaws.com/cmpe280finalprojectbucket/clothes/c4.jpeg"},
         "clothes5":{"name":"Leredey Dress","price":"228","description":"Side effect. A singular shoulder ruffle brings a welcome softness to a clean-lined silhouette. For formal and informal occasions alike. " +
             "Polyester; lining: polyester " +
             "Straight fit " +
@@ -119,14 +133,18 @@ function DBProductImport()
             "Lined " +
             "Navy colorway available online only " +
             "Dry clean " +
-            "Imported ","reviews":{"review1":"This dress is super cute, and I love the side zip detail. The seaming on the chest looks a little odd, but overall the fit is good and it's comfortable.","review2":"Perfect red dresses! Fits well and received so many compliments :)","review3":"Perfect red dresses! Fits well and received so many compliments :)"},"rate":"4.4","pictureURI":"http://www.clubmonaco.com/product/index.jsp?productId=146387676"},
+            "Imported ","reviews":{"review1":"This dress is super cute, and I love the side zip detail. The seaming on the chest looks a little odd, but overall the fit is good and it's comfortable.","review2":"Perfect red dresses! Fits well and received so many compliments :)","review3":"Perfect red dresses! Fits well and received so many compliments :)"},
+            "rate":"4.4",
+            "pictureURI":"https://s3-us-west-1.amazonaws.com/cmpe280finalprojectbucket/clothes/c4.jpeg"},
         "clothes6":{"name":"Remi Sweater","price":"148","description":"With a twist. Unexpected details transform a slim-fitting sweater into something more dynamic. For jeans, with or without heels.\n" +
             "Viscose blend " +
             "Slim fit " +
             "23½\" in length, based on a size M; our model is 5'9\" and is wearing a size S " +
             "V-neck; cutout at back with twist details; allover rib knit " +
             "Hand wash " +
-            "Imported ","reviews":{"review1":"Worn twice, washed once, never dried. Not such a great deal now that I have to have it fixed...","review2":"I wore the top and wash it and when it came out the washer it was damage( un sew) on the arm and the bottom of the top.","review3":"Style is different very cute. Material nice; not too heavy but very soft. Runs a little large; recommend sizing down 1 size. But love it!"},"rate":"3.0","pictureURI":"http://s7d2.scene7.com/is/image/ClubMonacoGSI/p27265422_lifestyle?$flyout_main$&amp;iv=EU0rr0&amp;wid=550&amp;hei=550%22%20style=%22position:%20absolute;%20left:%200px;%20top:%200px;%20visibility:%20inherit;%22"},
+            "Imported ","reviews":{"review1":"Worn twice, washed once, never dried. Not such a great deal now that I have to have it fixed...","review2":"I wore the top and wash it and when it came out the washer it was damage( un sew) on the arm and the bottom of the top.","review3":"Style is different very cute. Material nice; not too heavy but very soft. Runs a little large; recommend sizing down 1 size. But love it!"},
+            "rate":"3.0",
+            "pictureURI":"https://s3-us-west-1.amazonaws.com/cmpe280finalprojectbucket/clothes/c6.jpeg"},
         "clothes7":{"name":"Katya Pleated Short","price":"148","description":"With movement. Tiny pleats give a pair of shorts a touch of sophistication. Instead of a skirt.\n" +
             "Polyester ; lining: polyester " +
             "Straight fit " +
@@ -135,14 +153,20 @@ function DBProductImport()
             "Lined " +
             "Dry clean " +
             "Hand wash " +
-            "Imported ","reviews":{"review1":"Sooooo cute! I had high hopes for these but was disappointed. These run small in my opinion. And we’re not very flattering to my booty. Tight in all the wrong places.","review2":"There is no lining on these shorts, which is only a problem for the ivory color. Overall fit and style for the darker colors - 5 stars. Ivory pair - 3 stars. I wish they would have made these with lining since they are very cute. They made the striped pair (same style with the high waist and sash tie) with lining!!!","review3":"These shorts are really cute and you can dress them up or down. They run a little bit small but I still fit into my normal size. I like them because are not really short. I bought them in the orange color and love it."},"rate":"4.1","pictureURI":""},
+            "Imported ",
+            "reviews":{"review1":"Sooooo cute! I had high hopes for these but was disappointed. These run small in my opinion. And we’re not very flattering to my booty. Tight in all the wrong places.","review2":"There is no lining on these shorts, which is only a problem for the ivory color. Overall fit and style for the darker colors - 5 stars. Ivory pair - 3 stars. I wish they would have made these with lining since they are very cute. They made the striped pair (same style with the high waist and sash tie) with lining!!!","review3":"These shorts are really cute and you can dress them up or down. They run a little bit small but I still fit into my normal size. I like them because are not really short. I bought them in the orange color and love it."},
+            "rate":"4.1",
+            "pictureURI":"https://s3-us-west-1.amazonaws.com/cmpe280finalprojectbucket/clothes/c7.jpeg"},
         "clothes8":{"name":"Kimi Sweater","price":"125","description":"Cropping up. An abbreviated cut and bold stripe give a classic sweater a sporty update. Pair with high-waisted jeans, pants, and skirts or with its matching Vekaranda skirt. " +
             "Viscose blend " +
             "Slim, cropped fit " +
             "15¾\" in length, based on a size M; our model is 5'9\" and is wearing a size S " +
             "Crewneck; rib knit trim at neck, hem, and cuffs; short sleeves; horizontal striped motif " +
             "Hand wash " +
-            "Imported ","reviews":{"review1":"Sweater runs very small and is very short. Is no where near a slouchy type fit as the picture suggests. I will be returning.","review2":"Definitely boot cut, NOT skinny jeans. Stiff material and awful fit - ordered my normal size and could barely zip them. Was really excited to order these and really disappointed when I put them on.","review3":"Definitely boot cut, NOT skinny jeans. Stiff material and awful fit - ordered my normal size and could barely zip them. Was really excited to order these and really disappointed when I put them on."},"rate":"","pictureURI":""},
+            "Imported ",
+            "reviews":{"review1":"Sweater runs very small and is very short. Is no where near a slouchy type fit as the picture suggests. I will be returning.","review2":"Definitely boot cut, NOT skinny jeans. Stiff material and awful fit - ordered my normal size and could barely zip them. Was really excited to order these and really disappointed when I put them on.","review3":"Definitely boot cut, NOT skinny jeans. Stiff material and awful fit - ordered my normal size and could barely zip them. Was really excited to order these and really disappointed when I put them on."},
+            "rate":"3.8",
+            "pictureURI":"https://s3-us-west-1.amazonaws.com/cmpe280finalprojectbucket/clothes/c8.jpeg"},
         "clothes9":{"name":"Citizens of Humanity Rocket","price":"218","description":"The new crop. A skinny silhouette is at its best with a high rise and shorter hemline. From L.A.-based denim brand Citizens of Humanity." +
             "Cotton blend " +
             "Skinny leg; high rise " +
@@ -150,7 +174,10 @@ function DBProductImport()
             "Belt loops at waistband; zip fly with button closure; classic five-pocket styling " +
             "By Citizens of Humanity " +
             "Machine wash " +
-            "Made in the USA","reviews":{"review1":"This pants fit just right. i always buy size 0 short. I am 5'3\" and weight 125 pounds. Love them!!","review2":"Love this sweater and how it’s reversible. The twist has a fun edge to it. Lighter which is nice for spring and fall","review3":"cute concept but wrong execution / fit. this sweater, although 100% cotton, felt scratchy. it did not have a casual-sexy drape, but sat very \"stiff\" and a boxy fit"},"rate":"3.5","pictureURI":""}};
+            "Made in the USA",
+            "reviews":{"review1":"This pants fit just right. i always buy size 0 short. I am 5'3\" and weight 125 pounds. Love them!!","review2":"Love this sweater and how it’s reversible. The twist has a fun edge to it. Lighter which is nice for spring and fall","review3":"cute concept but wrong execution / fit. this sweater, although 100% cotton, felt scratchy. it did not have a casual-sexy drape, but sat very \"stiff\" and a boxy fit"},
+            "rate":"3.5",
+            "pictureURI":"=https://s3-us-west-1.amazonaws.com/cmpe280finalprojectbucket/clothes/c9.jpeg"}};
 
     var shoesCollection = db.get('shoes');
     shoesCollection.insert(shoes,function(err,doc){
@@ -185,6 +212,5 @@ function DBProductImport()
         }
     });
 }
-
 DBProductImport();
 //check if the user account is registered or not
