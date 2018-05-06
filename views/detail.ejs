@@ -8,10 +8,13 @@
         <a class="item beauty">Beauty</a>
         <div class="right menu">
             <div class="item">
-                <a class="ui button login">Log in</a>
+                <a class="ui button login">Login</a>
             </div>
             <div class="item">
                 <a class="ui button checkOut"><i class="shopping cart icon"></i></a>
+            </div>
+            <div class="item">
+                <a class="ui button logout">Loguot</a>
             </div>
             <!--<div class="item">-->
             <!--<a class="ui primary button signup">Sign Up</a>-->
@@ -27,6 +30,7 @@
     <a class="active item shoes">Shoes</a>
     <a class="item beauty">Beauty</a>
     <a class="item login">Login</a>
+    <a class="item logout">Logout</a>
     <a class="item checkOut">Checkout</a>
     <!--<a class="item signup">Signup</a>-->
 </div>
@@ -46,9 +50,16 @@
                 <a class="item shoes">Shoes</a>
                 <a class="item beauty">Beauty</a>
                 <div class="right item">
-                    <a class="ui inverted button login">Log in</a>
-                    <a class="ui inverted button checkOut"><i class="shopping cart icon"></i></a>
-                    <!--<a class="ui inverted button signup">Sign Up</a>-->
+                    <a class="ui blue inverted button login">Log in</a>
+                    <a class="ui blue inverted button logout">Logout</a>
+                    <a style="position: relative;left: 10px" class = "checkOut">
+                        <div class="ui vertical blue animated button" tabindex="0">
+                            <div class="hidden content">Shop</div>
+                            <div class="visible content">
+                                <i class="shop icon"></i>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -73,27 +84,25 @@
         </div>
         <div class="six wide column ">
             <div class="ui image center">
-                <img style="width: auto" id="product-image" src="/images/beauty/shiseido.jpg">
+                <img style="width: auto" id="product-image" src="<%=image%>">
             </div>
         </div>
         <div class="six wide column ">
             <p class="ui image center desc">
                 <div class="centered">
             <p>
-                <b>SHISEIDO</b>
+                <b><%=productName%></b>
                 <br>
-                <b>Ultimune Power Infusing Concentrate</b></p>
 
         </br>
         <div id="price">
-            <p><b style="font-size: 20px">$97</b><span style="color: grey; font-size: 12px">&nbsp &nbsp &nbsp Free shipping</span></p>
+            <p><b style="font-size: 20px"><%=price%></b><span style="color: grey; font-size: 12px">&nbsp &nbsp &nbsp Free shipping</span></p>
         </div>
         <br>
         <div>
         <p><b class="desc-title">What it is:</b>
             <br>
-            A one-of-a-kind boosting pre-treatment that helps defend against multiple signs of aging and damage,
-            while enhancing the effects of skincare that follows.</p>
+            <%=productDescription%></p>
         </div>
         <br>
         <div>
@@ -213,8 +222,8 @@
                 <span class="fa fa-star checked"></span>
             </div>
             <br>
-            <p>Received this as a sample and used itat night with moisturizer over it. I am a serum/moisturizer junkie and always expect products to take time to work, but the results from this were amazing. The next morning lines were less visible and skin incredibly smooth! 4 stars only because of the price.</p>
-        <div class="button-group" style="float: right">
+            <p><%=review1%></p>
+            <div class="button-group" style="float: right">
             <button class="ui white button"></p>HELPFUL</button>
             <button class="ui white button">NOT HELPFUL</button>
         </div>
@@ -226,7 +235,21 @@
             <img src="/images/profilepic/download.jpeg" width="160px" height="160px">
         </div>
         <div class="two wide column"> </div>
-        <div class="eleven wide column"> </div>
+        <div class="eleven wide column" style="padding: 20px">
+            <div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+            <br>
+            <p><%=review2%></p>
+            <div class="button-group" style="float: right">
+                <button class="ui white button"></p>HELPFUL</button>
+                <button class="ui white button">NOT HELPFUL</button>
+            </div>
+        </div>
     </div>
     <hr style="border:1px solid #f1f1f1; margin-top: 20px; margin-bottom: 20px">
     <div class="ui row">
@@ -234,7 +257,21 @@
             <img src="/images/profilepic/download.jpeg" width="160px" height="160px">
         </div>
         <div class="two wide column"> </div>
-        <div class="eleven wide column"> </div>
+        <div class="eleven wide column" style="padding: 20px">
+            <div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+            <br>
+            <p><%=review3%></p>
+            <div class="button-group" style="float: right">
+                <button class="ui white button"></p>HELPFUL</button>
+                <button class="ui white button">NOT HELPFUL</button>
+            </div>
+        </div>
     </div>
     <hr style="border:1px solid #f1f1f1; margin-top: 20px; margin-bottom: 20px">
 </div>
