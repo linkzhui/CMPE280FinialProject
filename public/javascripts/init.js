@@ -9,5 +9,6 @@ function init()
     $(".signup").attr("href","/user/signup");
     $(".logout").attr("href","/user/logout");
     $(".shoppingChart").attr("style","background: url(/images/shoppingChart1.png)");
+    $(".shoppingChartUrl").attr("href","/shopping");
 
 }

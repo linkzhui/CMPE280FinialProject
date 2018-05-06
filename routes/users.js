@@ -38,4 +38,6 @@ router.post('/updateuser',userCtrl.update_user);
 /* delete the users list*/
 router.post('/deleteuser',userCtrl.delete_user);
 
+
+
 module.exports = router;
