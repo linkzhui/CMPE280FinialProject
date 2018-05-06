@@ -48,8 +48,9 @@ router.get('/beauty', function(req, res, next) {
     }
 });
 
-router.get('/detail', function(req, res, next) {
-    console.log("current user: "+req.session.user);
+router.get('/detail/:type/:product_id', function(req, res, next) {
+    console.log("type: "+req.params.type);
+    console.log("product_id: "+req.params.product_id);
     if(req.session.user)
     {
         res.render('detail', { title: 'Detail', login:req.session.user});
