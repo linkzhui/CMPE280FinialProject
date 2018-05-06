@@ -53,10 +53,10 @@ router.get('/detail/:type/:product_id', function(req, res, next) {
     console.log("product_id: "+req.params.product_id);
     if(req.session.user)
     {
-        res.render('detail', { title: 'Detail', login:req.session.user});
+        res.render('detail', { title: 'Detail', login:req.session.user,type:req.params.type,product_id:req.params.product_id});
     }
     else{
-        res.render('detail', { title: 'Detail', login:'no'});
+        res.render('detail', { title: 'Detail', login:'no',type:req.params.type,product_id:req.params.product_id});
     }
 });
 
