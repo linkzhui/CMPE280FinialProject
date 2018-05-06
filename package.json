@@ -12,6 +12,7 @@
     "ejs": "~2.5.7",
     "express": "~4.15.5",
     "express-ejs-extend": "0.0.1",
+    "express-session": "^1.15.6",
     "json": "^9.0.6",
     "mongo": "^0.1.0",
     "monk": "^6.0.5",

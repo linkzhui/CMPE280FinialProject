@@ -13,6 +13,9 @@
       <div class="item">
         <a class="ui blue button checkOut">Check out</a>
       </div>
+      <div class="item">
+        <a class="ui blue button logout">Logout</a>
+      </div>
       <!--<div class="item">-->
         <!--<a class="ui primary button signup">Sign Up</a>-->
       <!--</div>-->
@@ -27,6 +30,7 @@
   <a class="item shoes">Shoes</a>
   <a class="active item beauty">Beauty</a>
   <a class="item login">Login</a>
+  <a class="item button logout">Logout</a>
   <a class="item checkOut">Check out</a>
   <!--<a class="item signup">Signup</a>-->
 </div>
@@ -47,8 +51,15 @@
         <a class="active item beauty">Beauty</a>
         <div class="right item">
           <a class="ui inverted blue button login">Log in</a>
-          <a class="ui inverted blue button checkout" style="position: relative;left: 10px">Check out</a>
-          <!--<a class="ui inverted button signup">Sign Up</a>-->
+          <a class="ui button logout" style="position: relative;left: 10px">Logout</a>
+          <a style="position: relative;left: 10px" class = "checkOut">
+            <div class="ui vertical blue animated button" tabindex="0">
+              <div class="hidden content">Shop</div>
+              <div class="visible content">
+                <i class="shop icon"></i>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>

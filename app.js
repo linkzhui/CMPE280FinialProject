@@ -9,24 +9,22 @@ var usersRouter = require('./routes/users');
 var body_parser = require('body-parser');
 var app = express();
 var expressEjsExtend = require("express-ejs-extend");
+var session = require('express-session');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.engine('ejs', require('express-ejs-extend')); // add this line
 app.set('view engine', 'ejs');
-
+app.use(session({
+    path: '/', secure: false, maxAge: null,secret:'keyboard cat',saveUninitialized:true,resave:true}));
 app.use(logger('dev'));
 // app.use(express.json());
-// app.use(body_parser());
-// app.use(express.urlencoded({ extended: false }));
+app.use(body_parser.json());
+app.use(body_parser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
 //MongoDB setup
-var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk('localhost:27017/280FinalProject');
+
+var db = require('monk')('localhost:27017/280FinalProject');
 
 //Make the database accessible to the router.
 app.use(function(req, res, next)
@@ -34,6 +32,10 @@ app.use(function(req, res, next)
     req.db = db;
     next();
 });
+
+app.use('/', indexRouter);
+app.use('/user', usersRouter);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

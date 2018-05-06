@@ -124,9 +124,31 @@
     <script src="/Semantic-UI-CSS/components/sidebar.js"></script>
     <script src="/Semantic-UI-CSS/components/transition.js"></script>
     <script src="/javascripts/init.js"></script>
+    <script src="/javascripts/ejs.min.js"></script>
     <script>
         $(document)
             .ready(function() {
+                <%
+                if(login==='no')
+                {
+                    %>
+                    alert("<%=login%>");
+                    $('.login').show();
+                    $('.logout').hide();
+                <%
+                }
+                else{
+                    %>
+                    alert("hello "+"<%=login%>");
+                    $('.login').hide();
+                    $('.logout').show();
+                <%
+                }
+
+
+
+ %>
+
 
                 // fix menu when passed
                 $('.masthead')
@@ -146,8 +168,22 @@
                     .sidebar('attach events', '.toc.item')
                 ;
 
-            })
-        ;
+            });
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
     </script>
 </head>
 <body>
