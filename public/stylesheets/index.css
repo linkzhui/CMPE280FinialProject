@@ -141,3 +141,15 @@ img {vertical-align: middle;}
     width: 400px;
     height: 400px;
 }
+
+.lets_shopping{
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
