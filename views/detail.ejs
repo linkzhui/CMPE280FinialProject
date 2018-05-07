@@ -52,8 +52,8 @@
                 <div class="right item">
                     <a class="ui blue inverted button login">Log in</a>
                     <a class="ui blue inverted button logout">Logout</a>
-                    <a style="position: relative;left: 10px" class = "checkOut">
-                        <div class="ui vertical blue animated button" tabindex="0">
+                    <a style="position: relative;left: 10px" class = "shoppingChartUrl">
+                        <div class="ui blue vertical blue animated button" tabindex="0">
                             <div class="hidden content">Shop</div>
                             <div class="visible content">
                                 <i class="shop icon"></i>
@@ -93,6 +93,7 @@
             <p>
                 <b><%=productName%></b>
                 <br>
+            </p>
 
         </br>
         <div id="price">
@@ -106,7 +107,7 @@
         </div>
         <br>
         <div>
-        <select class="ui compact selection dropdown">
+        <select class="ui compact selection dropdown" id="itemNum">
             <option selected="" value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -121,7 +122,48 @@
         </div>
         <br>
         <div>
-            <button class="ui black button">Add to Cart</button>
+            <script>
+                function addToCart(){
+                    var d = new Date();
+                    d.setTime(d.getTime() + (1*24*60*60*1000));
+                    var expires = "expires="+d.toUTCString();
+                    var e = document.getElementById("itemNum");
+                    var selectNum = e.options[e.selectedIndex].value;
+                    var product = "<%=type+product_id%>";
+                    var existNum = getCookie(product);
+                    var num;
+                    if(existNum.length==0)
+                    {
+                        num = selectNum;
+                    }
+                    else
+                    {
+                        num = parseInt(existNum)+parseInt(selectNum);
+                    }
+                    // document.cookie = product+"="+num;
+                    document.cookie = product+"_image"+"="+"<%=image%>"+ "; " + expires +";path=/";
+                    document.cookie = product+"_price"+"="+"<%=price%>"+ "; " + expires +";path=/";
+                    document.cookie = product+"_name"+"="+"<%=productName%>"+ "; " + expires +";path=/";
+                    document.cookie = product+"="+num+ "; " + expires +";path=/";
+
+                }
+                function getCookie(cname) {
+                    var name = cname + "=";
+                    var decodedCookie = decodeURIComponent(document.cookie);
+                    var ca = decodedCookie.split(';');
+                    for(var i = 0; i <ca.length; i++) {
+                        var c = ca[i];
+                        while (c.charAt(0) == ' ') {
+                            c = c.substring(1);
+                        }
+                        if (c.indexOf(name) == 0) {
+                            return c.substring(name.length, c.length);
+                        }
+                    }
+                    return "";
+                }
+            </script>
+            <button class="ui black button" onclick="addToCart()">Add to Cart</button>
         </div>
         <br>
 

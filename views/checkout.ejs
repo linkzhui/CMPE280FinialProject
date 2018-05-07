@@ -47,9 +47,16 @@
                 <a class="item shoes">Shoes</a>
                 <a class="item beauty">Beauty</a>
                 <div class="right item">
-                    <a class="ui inverted button login">Log in</a>
-                    <a class="ui inverted button checkOut"><i class="shopping cart icon"></i></a>
-                    <!--<a class="ui inverted button signup">Sign Up</ a>-->
+                    <a class="ui inverted blue button login">Log in</a>
+                    <a class="ui inverted blue button logout">Logout</a>
+                    <a style="position: relative;left: 10px" class = "shoppingChartUrl">
+                        <div class="ui vertical blue animated button" tabindex="0">
+                            <div class="hidden content">Shop</div>
+                            <div class="visible content">
+                                <i class="shop icon"></i>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -58,7 +65,7 @@
     <br/>
 
     <div class="ui text container">
-        <form class="ui form">
+        <form class="ui form" method="get" action="/">
             <h4 class="ui dividing header">Shipping Information</h4>
             <div class="field">
                 <label>Name</label>
@@ -196,7 +203,7 @@
                     </div>
                 </div>
             </div>
-            <div class="ui button" tabindex="0">Submit Order</div>
+            <button class="ui blue submit button" tabindex="0">Submit Order</button>
         </form>
     </div>
 <!--</div>-->

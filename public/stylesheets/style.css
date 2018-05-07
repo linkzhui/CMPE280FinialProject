@@ -87,6 +87,10 @@ body {
   color: white;
 }
 
+.cart-item{
+  padding-top: 50px;
+}
+
 /* Individual bars */
 .bar-5 {width: 60%; height: 18px; background-color: #000000;}
 .bar-4 {width: 30%; height: 18px; background-color: #000000;}

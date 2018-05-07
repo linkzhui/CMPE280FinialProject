@@ -47,8 +47,9 @@
                 <a class="item shoes">Shoes</a>
                 <a class="item beauty">Beauty</a>
                 <div class="right item">
-                    <a class="ui inverted button login">Log in</a>
-                    <a class="ui inverted button checkOut"><i class="shopping cart icon"></i></a>
+                    <a class="ui blue inverted button login">Log in</a>
+                    <a class="ui blue inverted button logout">Logout</a>
+                    <a style="position: relative;left: 10px" class="ui blue inverted button checkOut"><i class="shopping cart icon"></i></a>
                     <!--<a class="ui inverted button signup">Sign Up</ a>-->
                 </div>
             </div>
@@ -69,25 +70,33 @@
             <!-- Replace with Javascript for dynamics number of items-->
 
             <script>
-                var totalprice = 0;
+
+
+
+                <%
+                var totalprice = 0.00;
                 var totalquantity = 0;
-                for(var p in container) {
-                    var innerObj = container[p];
+                for(var i = 0;i<product_image.length;i++) {%>
                     document.write('<div class="row">')
                     document.write('<div class="three wide column"></div>')
                     document.write('<div class="three wide column">')
-                    document.write('<img src='+ innerObj['image']+'>')
+                    document.write('<img src="<%=product_image[i]%>">')
                     document.write('</div>')
 
                     document.write('<div class="three wide column"></div>')
                     document.write('<div class="three wide column cart-item">')
 
-                    document.write('<h4>Price :' + innerObj['price'] + '</h4>')
-                    document.write('<h4>Quantity :' + innerObj['quantity'] + '</h4>')
+                    document.write('<h4>Price :' + "<%=product_price[i]%>" + '</h4>')
+                    document.write('<h4>Quantity :' + "<%=product_num[i]%>" + '</h4>')
                     document.write('</div>')
-                    totalprice +=  innerObj['price'];
-                    totalquantity += innerObj['quantity'];
-                }
+                    document.write('</div>')
+
+               <%
+                    totalprice +=  parseFloat(product_price[i]) * parseFloat(product_num[i]);
+                    totalquantity += parseInt(product_num[i]);
+                } %>
+                document.getElementById("price").innerHTML="hello world";
+                document.getElementById("quantity").innerHTML="hello world";
             </script>
 
 
@@ -109,21 +118,21 @@
             <!--</script>-->
 
 
-            <div class="row">
-                <div class="three wide column"></div>
-                <div class="three wide column">
-                    <img src="https://s3-us-west-1.amazonaws.com/cmpe280finalprojectbucket/shoesPictures/1.jpg">
-                </div>
-                <div class="three wide column"></div>
-                <div class="three wide column cart-item">
-                    <h4>Price : $50</h4>
-                    <h4>Quantity : 1</h4>
-                </div>
-            </div>
+            <!--<div class="row">-->
+                <!--<div class="three wide column"></div>-->
+                <!--<div class="three wide column">-->
+                    <!--<img src="https://s3-us-west-1.amazonaws.com/cmpe280finalprojectbucket/shoesPictures/1.jpg">-->
+                <!--</div>-->
+                <!--<div class="three wide column"></div>-->
+                <!--<div class="three wide column cart-item">-->
+                    <!--<h4>Price : $50</h4>-->
+                    <!--<h4>Quantity : 1</h4>-->
+                <!--</div>-->
+            <!--</div>-->
 
 
             <!-- Summary of shopping chart-->
-            <div class="row"></div>>
+            <div class="row"></div>
             <div class="row">
                 <div class="three wide column"></div>
                 <div class="three wide column">
@@ -138,7 +147,7 @@
                 </div>
                 <div class="three wide column"></div>
                 <div class="three wide column">
-                    <h4>1</h4>
+                    <h4 id="quantity"><%=totalquantity%></h4>
                     <!--<h4><script>totalquantity</script></h4>-->
                 </div>
             </div>
@@ -150,7 +159,7 @@
                 </div>
                 <div class="three wide column"></div>
                 <div class="three wide column">
-                    <h4>$50</h4>
+                    <h4 id="price"><%=totalprice%></h4>
                     <!--<h4><script>totalprice</script></h4>-->
                 </div>
             </div>
@@ -160,7 +169,7 @@
             <div class="row">
                 <div class="twelve wide column"></div>
                 <div class="three wide column">
-                    <div class="ui button" tabindex="0">Check Out</div>
+                    <a class="ui blue inverted primary button checkout" tabindex="0">Check Out</a>
                 </div>
             </div>
 
