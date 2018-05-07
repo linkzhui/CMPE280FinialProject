@@ -1,93 +1,317 @@
 <% extend('layout') %>
 <!-- Following Menu -->
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
 <div class="ui large top fixed hidden menu">
     <div class="ui container">
-        <!--<a class="active item main">Main</a>-->
-        <!--<a class="item clothes">Clothes</a>-->
-        <!--<a class="item shoes">Shoes</a>-->
-        <!--<a class="item beauty">Beauty</a>-->
+        <a class="item main">Main</a>
+        <a class="item clothes">Clothes</a>
+        <a class="active item shoes">Shoes</a>
+        <a class="item beauty">Beauty</a>
         <div class="right menu">
             <div class="item">
-                <a class="ui primary button login loginButton">Login</a>
+                <a class="ui button login">Log in</a>
             </div>
             <div class="item">
-                <a class="ui button logout">Logout</a>
+                <a class="ui button checkOut">Check out</a>
             </div>
+            <!--<div class="item">-->
+            <!--<a class="ui primary button signup">Sign Up</a>-->
+            <!--</div>-->
         </div>
     </div>
 </div>
 
 <!-- Sidebar Menu -->
 <div class="ui vertical inverted sidebar menu">
+    <a class="item main">Main</a>
+    <a class="item clothes">Clothes</a>
+    <a class="active item shoes">Shoes</a>
+    <a class="item beauty">Beauty</a>
     <a class="item login">Login</a>
-    <a class="item logout">Logout</a>
+    <a class="item checkOut">Check Out</a>
+    <!--<a class="item signup">Signup</a>-->
 </div>
 
 
 <!-- Page Contents -->
 <div class="pusher">
-    <div class="ui inverted vertical masthead center aligned segment">
+    <div class="ui inverted vertical center aligned segment">
 
         <div class="ui container">
             <div class="ui large secondary inverted pointing menu">
                 <a class="toc item">
                     <i class="sidebar icon"></i>
                 </a>
-                <!--<a class="active item main">Main</a>-->
-                <!--<a class="item clothes">Clothes</a>-->
-                <!--<a class="item shoes">Shoes</a>-->
-                <!--<a class="item beauty">Beauty</a>-->
+                <a class="active item main">Main</a>
+                <a class="item clothes">Clothes</a>
+                <a class="item shoes">Shoes</a>
+                <a class="item beauty">Beauty</a>
                 <div class="right item">
-                    <a class="ui inverted button blue login">Login</a>
-                    <a class="ui inverted button blue logout">Logout</a>
+                    <a class="ui inverted button login">Log in</a>
+                    <a class="ui inverted button checkOut">Check out</a>
+                    <!--<a class="ui inverted button signup">Sign Up</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--/testing-->
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <!--<div class="numbertext">3 / 3</div>-->
+            <img class = "backgroundimage"  src="images/mainpic/Mather4.jpg" style="width:100%">
+            <div class="text">
+                <p id="demo" style="font-size:50px; color: #0f0f10;" ></p>
+            </div>
+        </div>
+
+
+        <div class="mySlides fade">
+            <a href="/shoes"  >
+                <img class = "backgroundimage"  src="images/shoes/shoes4.png" style="width:100%">
+            </a>
+        </div>
+
+        <div class="mySlides fade">
+            <!--<div class="numbertext">2 / 3</div>-->
+            <img class = "backgroundimage"  src="images/mainpic/Mather2.jpg" style="width:100%">
+            <!--<div class="text">Caption Two</div>-->
+        </div>
+
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!--testing-->
+    <br>
+    <br>
+
+
+    <div class = "ui four column grid segment" >
+
+        <div class="two wide column" >
+        </div>
+
+        <div class="five wide column" >
+            <!--<div class="ui image">-->
+                <!--<img src="/images/mostPopular/mostPopularClothes.png">-->
+            <!--</div>-->
+            <a href="detail/clothes/3" class="ui image">
+                <img   src="/images/mostPopular/mostPopularClothes.png">
+            </a>
+            <h3 style="color:cornflowerblue; text-align:right">Crista Jacket in Studio</h3>
+        </div>
+
+
+
+
+
+        <div class="eight wide column">
+            <div class="ui two column grid">
+                <div class="column">
+                    <a href="/detail/shoes/8" class="ui image">
+                        <img   src="/images/mostPopular/mostPopularShoes.jpg" style = " height: 400px">
+                    </a>
+                </div>
+                <div class="column">
+                    <a href="detail/beauty/1" class="ui image">
+                        <img   src="/images/mostPopular/mostPopularBeauty.jpg" style = " height: 400px">
+                    </a>
+                </div>
+
+                <div class="column">
+                    <a href="/detail/clothes/1" class="ui image">
+                        <img   src="/images/mostPopular/mostPopularClothes2.jpg" style = " height: 400px">
+                    </a>
+                </div>
+
+
+                <div class="column">
+                    <a href="/detail/clothes/7" class="ui image">
+                        <img   src="/images/mostPopular/mostPopularClothes3.jpeg" style = " height: 400px">
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="ui text container">
-            <h1 class="ui inverted header">
-                Welcome to Firelight!
-            </h1>
-            <h2>Let's shopping!</h2>
-            <a class="ui huge primary button clothes">Get Started <i class="right arrow icon"></i></a>
+        <div class="one wide column" >
         </div>
+
     </div>
-    <div class = "ui grid">
-        <div class="sixteen wide column">
-            <div class="ui image">
-                <img src="/images/clothes/clothes1.png">
-            </div>
+
+    <br>
+    <!--Statistics-->
+    <div class = "ui two column grid">
+        <div class = "column">
+            <div id="pie_chart" style="height: 600px; width: 800px"></div>
         </div>
+
+        <div class = "column">
+            <div id="combo_chart" style="height: 600px; width: 800px">
+            </div>
+            <!--<table class="columns">-->
+            <!--<tr>-->
+            <!--<td><div id="pie_chart" style="height: 600px; width: 800px; border: 1px solid #ccc"></div></td>-->
+            <!--<td><div id="combo_chart" style="height: 600px; width: 800px;border: 1px solid #ccc"></td>-->
+            <!--<td><div id="combo_chart" style="height: 600px; width: 800px;border: 1px solid #ccc"></td>-->
+            <!--</tr>-->
+            <!--</table>-->
+        </div>
+
+
+
+
+
     </div>
-    <div class = "ui two column grid segment">
-        <div class="eight wide column">
-            <div class="ui image">
-                <img src="/images/accessory/accessory5.png">
-            </div>
-        </div>
-        <div class="eight wide column">
-            <div class="ui grid">
-                <div class="eight wide column">
-                    <div class="ui image">
-                        <img src="/images/accessory/accessory1.png">
-                    </div>
-                </div>
-                <div class="eight wide column">
-                    <div class="ui image">
-                        <img src="/images/accessory/accessory2.png">
-                    </div>
-                </div>
-                <div class="eight wide column">
-                    <div class="ui image">
-                        <img src="/images/accessory/accessory3.png">
-                    </div>
-                </div>
-                <div class="eight wide column">
-                    <div class="ui image">
-                        <img src="/images/accessory/accessory4.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+    <!--<script scr="/javascripts/index.js"></script>-->
+    <!--Slider script-->
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+//        if(n != slides.length){
+//            var demo = document.getElementById("demo");
+//            demo.style.hidden();
+//        }
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+
+    <!--time counting-->
+    <script>
+        var countDownDate = new Date("May 13, 2018 00:00:00").getTime();
+        // Update the count down every 1 second
+        var countdownfunction = setInterval(function() {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+                clearInterval(countdownfunction);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+    <!--statistics-->
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+        // Load the Visualization API and the corechart package.
+        google.charts.load('current', {'packages':['corechart']});
+
+
+        // Set a callback to run when the Google Visualization API is loaded.
+        google.charts.setOnLoadCallback(drawPieChart);
+        google.charts.setOnLoadCallback(drawComboChart);
+
+        //    Draw the pie chart
+        function drawPieChart() {
+            // Create the data table.
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Shoes',     3],
+                ['Clothes',      2],
+                ['Beauty',  2]
+            ]);
+
+            // Set chart options
+            var options = {
+                title: 'Selling Percentage',
+                pieHole: 0.4,
+//            pieSliceTextStyle: {
+//                color: 'black',
+//            },
+//            width: 800,
+//            height: 600,
+                slices: {
+                    0: { color: 'red' },
+                    1: { color: 'pink' },
+                    2: { color: 'orange'}
+                }
+            };
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.PieChart(document.getElementById('pie_chart'));
+            chart.draw(data, options);
+        }
+
+        //    Draw combo chart
+        function drawComboChart() {
+            // Some raw data (not necessarily accurate)
+            var data = google.visualization.arrayToDataTable([
+                ['Month', 'Shoes', 'Clothes', 'Beauty'],
+                ['2010',  165,      938,         522],
+                ['2011',  135,      1120,        599],
+                ['2012',  157,      1167,        587],
+                ['2013',  139,      1110,        615],
+                ['2014',  136,      691,         629],
+                ['2015',  136,      691,         629],
+                ['2016',  136,      691,         629],
+                ['2017',  136,      691,         629]
+
+            ]);
+
+            var options = {
+                title : 'Items sell for mather',
+                vAxis: {title: 'Count'},
+                hAxis: {title: 'Year'},
+                seriesType: 'bars',
+                series: {5: {type: 'line'}}
+            };
+
+            var chart = new google.visualization.ComboChart(document.getElementById('combo_chart'));
+            chart.draw(data, options);
+        }
+    </script>
