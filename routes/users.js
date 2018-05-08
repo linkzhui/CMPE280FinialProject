@@ -15,7 +15,7 @@ router.get('/signup',function(req, res, next)
 router.get('/logout',function(req, res, next)
 {
     req.session.user="";
-    res.render('index', { title: 'Home Page', login:'no'});
+    res.render('clothes', { title: 'Clothes', login:'no'});
 });
 
 /* GET users list. */

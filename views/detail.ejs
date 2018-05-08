@@ -97,7 +97,7 @@
 
         </br>
         <div id="price">
-            <p><b style="font-size: 20px"><%=price%></b><span style="color: grey; font-size: 12px">&nbsp &nbsp &nbsp Free shipping</span></p>
+            <p><b style="font-size: 20px">$<%=price%></b><span style="color: grey; font-size: 12px">&nbsp &nbsp &nbsp Free shipping</span></p>
         </div>
         <br>
         <div>
@@ -145,7 +145,7 @@
                     document.cookie = product+"_price"+"="+"<%=price%>"+ "; " + expires +";path=/";
                     document.cookie = product+"_name"+"="+"<%=productName%>"+ "; " + expires +";path=/";
                     document.cookie = product+"="+num+ "; " + expires +";path=/";
-
+                    alert("Add "+"<%=productName%>"+" to cart successful!");
                 }
                 function getCookie(cname) {
                     var name = cname + "=";
