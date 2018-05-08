@@ -87,9 +87,7 @@ body {
   color: white;
 }
 
-.cart-item{
-  padding-top: 50px;
-}
+
 
 /* Individual bars */
 .bar-5 {width: 60%; height: 18px; background-color: #000000;}
@@ -107,3 +105,14 @@ body {
     display: none;
   }
 }
+/* Shopping Cart Item */
+.cart-item{
+  padding-top: 50px;
+}
+/*checkout error message*/
+.checkout-error{
+  color: red;
+}
+
+/*Checkout Form*/
+

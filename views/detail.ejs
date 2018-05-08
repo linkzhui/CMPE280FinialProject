@@ -132,14 +132,14 @@
                     var product = "<%=type+product_id%>";
                     var existNum = getCookie(product);
                     var num;
-                    if(existNum.length==0)
-                    {
-                        num = selectNum;
-                    }
-                    else
-                    {
-                        num = parseInt(existNum)+parseInt(selectNum);
-                    }
+                        if(existNum.length==0)
+                        {
+                            num = selectNum;
+                        }
+                        else
+                        {
+                            num = parseInt(existNum)+parseInt(selectNum);
+                        }
                     // document.cookie = product+"="+num;
                     document.cookie = product+"_image"+"="+"<%=image%>"+ "; " + expires +";path=/";
                     document.cookie = product+"_price"+"="+"<%=price%>"+ "; " + expires +";path=/";

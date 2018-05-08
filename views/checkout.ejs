@@ -65,16 +65,16 @@
     <br/>
 
     <div class="ui text container">
-        <form class="ui form" method="get" action="/">
+        <form class="ui form" name="checkout_form" id="checkout_form" method="get" action="/">
             <h4 class="ui dividing header">Shipping Information</h4>
             <div class="field">
                 <label>Name</label>
                 <div class="two fields">
                     <div class="field">
-                        <input type="text" name="shipping[first-name]" placeholder="First Name">
+                        <input type="text" name="firstName" placeholder="First Name" required>
                     </div>
                     <div class="field">
-                        <input type="text" name="shipping[last-name]" placeholder="Last Name">
+                        <input type="text" name="shipping[last-name]" placeholder="Last Name"required>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                 <label>Billing Address</label>
                 <div class="fields">
                     <div class="twelve wide field">
-                        <input type="text" name="shipping[address]" placeholder="Street Address">
+                        <input type="text" name="shipping[address]" placeholder="Street Address"required>
                     </div>
                     <div class="four wide field">
                         <input type="text" name="shipping[address-2]" placeholder="Apt #">
@@ -92,7 +92,7 @@
             <div class="two fields">
                 <div class="field">
                     <label>State</label>
-                    <select class="ui fluid dropdown">
+                    <select class="ui fluid dropdown" required>
                         <option value="">State</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
@@ -149,7 +149,7 @@
                 </div>
                 <div class="field">
                     <label>Country</label>
-                    <select class="ui fluid search selection dropdown">
+                    <select class="ui fluid search selection dropdown" required>
                         <option value="">Select Country</option>
                         <option value="1">United States</option>
                         <option value="2">Canada</option>
@@ -160,7 +160,7 @@
             <h4 class="ui dividing header">Billing Information</h4>
             <div class="field">
                 <label>Card Type</label>
-                <select class="ui fluid search dropdown" name="card[type]">
+                <select class="ui fluid search dropdown" name="card[type]" required>
                         <option value="">Card Type</option>
                         <option value="1">American Express</option>
                         <option value="1">Discover</option>
@@ -171,17 +171,20 @@
             <div class="fields">
                 <div class="seven wide field">
                     <label>Card Number</label>
-                    <input type="text" name="card[number]" maxlength="16" placeholder="Card #">
+                    <input type="text" id="card[number]" name="card[number]" maxlength="16"
+                           onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;"
+                           placeholder="Card #" minlength="16" required>
+                    <p id="ErrorCreditCard" class="checkout-error"></p>
                 </div>
                 <div class="three wide field">
                     <label>CVC</label>
-                    <input type="text" name="card[cvc]" maxlength="3" placeholder="CVC">
+                    <input type="text" name="card[cvc]" maxlength="3" placeholder="CVC" required>
                 </div>
                 <div class="six wide field">
                     <label>Expiration</label>
                     <div class="two fields">
                         <div class="field">
-                            <select class="ui fluid search dropdown" name="card[expire-month]">
+                            <select class="ui fluid search dropdown" name="card[expire-month]" required>
                                 <option value="">Month</option>
                                 <option value="1">January</option>
                                 <option value="2">February</option>
@@ -198,17 +201,47 @@
                             </select>
                         </div>
                         <div class="field">
-                            <input type="text" name="card[expire-year]" maxlength="4" placeholder="Year">
+                            <input id="card[expire-year]" type="number" name="card[expire-year]" maxlength="4" placeholder="Year"
+                                   min="2018" max="30000" required>
+                            <p id="ErrorExpireYear" class="checkout-error" ></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="ui blue submit button" tabindex="0">Submit Order</button>
+            <button class="ui blue submit button" tabindex="0" onclick="checkoutFunction()">Submit Order</button>
+
         </form>
     </div>
 <!--</div>-->
 
 
+    <script>
+        function checkoutFunction() {
+
+            var inpObj = document.getElementById("card[expire-year]");
+            if (!inpObj.checkValidity()) {
+                var txt = "validation year must after 2018";
+                document.getElementById("ErrorExpireYear").innerHTML = txt;
+            }
+
+            var inpObj = document.getElementById("card[number]");
+            if (!inpObj.checkValidity()) {
+                var txt = "must be 16 length number";
+                document.getElementById("ErrorCreditCard").innerHTML = txt;
+            }
+
+
+            // delete cookie at checkout
+            var cookies = document.cookie.split(";");
+
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i];
+                var eqPos = cookie.indexOf("=");
+                var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            }
+        }
+    </script>
+
 <br/>
-<p id="test"></p>
 </div>
