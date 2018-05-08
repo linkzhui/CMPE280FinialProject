@@ -214,10 +214,15 @@ function DBImport()
 }
 DBImport();
 
-var collection = db.get('user');
+
 
 //random function to generator user's account name, password, last name and first name
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('localhost:27017/280FinalProject');
+var collection = db.get('user');
 function makeInfo(inputType) {
+
     var text = "";
     var number_letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     var letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
